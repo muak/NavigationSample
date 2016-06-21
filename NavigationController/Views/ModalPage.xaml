@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+  			 x:Class="NavigationSample.Views.ModalPage"
+  			 NavigationPage.HasNavigationBar="True"
+  			 BackgroundColor="Purple"
+  			 Title="ModalPage">
+	<StackLayout Padding="0,40,0,0">
+		<Label Text="ModalPage" />
+		<Label Text="{Binding Message}" />
+		<Button Text="次のページ" Command="{Binding NextPageCommand}" />
+		<Button Text="戻る" Command="{Binding GoBackCommand}" />
+	</StackLayout>
+</ContentPage>
