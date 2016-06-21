@@ -15,6 +15,7 @@
   	<StackLayout>
 	<Button Text="NextPage" Command="{Binding NextPageCommand}" />	
   	<Button Text="ModalPage" Command="{Binding ModalCommand}" />
+	<Button Text="GoToTab3" Command="{Binding ChangeTabCommand}" />
 	
 	</StackLayout>
 </ContentPage>

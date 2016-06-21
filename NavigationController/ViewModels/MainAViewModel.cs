@@ -35,6 +35,13 @@ namespace NavigationSample.ViewModels
             }
         }
 
+       private DelegateCommand _ChangeTabCommand;
+        public DelegateCommand ChangeTabCommand {
+            get { return _ChangeTabCommand = _ChangeTabCommand ?? new DelegateCommand(() => {
+                NaviCtrl.ChangeTab<CNavi>(); //Tab切り替え CNaviが担当しているTabに移動
+            }); }
+        }
+
         //INavigationAction適用時 PopAsyncで戻って来た場合に呼ばれる
         public void OnNavigatedBack() {
             Debug.WriteLine("戻ってきたよ");
